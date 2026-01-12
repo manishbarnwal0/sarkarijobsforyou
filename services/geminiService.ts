@@ -1,10 +1,10 @@
 import { GoogleGenAI } from "@google/genai";
 
-const apiKey = process.env.API_KEY;
-const ai = new GoogleGenAI({ apiKey: apiKey || "" });
+// Accessing the API Key from environment variables
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || "" });
 
 export const getJobSummary = async (jobTitle: string) => {
-  if (!apiKey) return "";
+  if (!process.env.API_KEY) return "";
   try {
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
@@ -18,7 +18,7 @@ export const getJobSummary = async (jobTitle: string) => {
 };
 
 export const getCareerAdvice = async (query: string) => {
-  if (!apiKey) return "API Key not configured.";
+  if (!process.env.API_KEY) return "API Key not configured.";
   try {
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
