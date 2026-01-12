@@ -1,6 +1,5 @@
 import { GoogleGenAI } from "@google/genai";
 
-// Standard way to access environment variables in the provided environment
 const apiKey = process.env.API_KEY || "";
 const ai = new GoogleGenAI({ apiKey });
 
@@ -8,7 +7,7 @@ export const getJobSummary = async (jobTitle: string) => {
   if (!apiKey) return "";
   try {
     const response = await ai.models.generateContent({
-      model: 'gemini-2.0-flash-exp', // Updated to a stable available model name
+      model: 'gemini-1.5-flash',
       contents: `Provide a concise, trust-building summary (2-3 sentences) for a Sarkari job notification titled: "${jobTitle}". Highlight why this is a good opportunity for candidates. Format it for an Indian audience.`,
     });
     return response.text || "";
@@ -22,7 +21,7 @@ export const getCareerAdvice = async (query: string) => {
   if (!apiKey) return "API Key not configured.";
   try {
     const response = await ai.models.generateContent({
-      model: 'gemini-2.0-flash-exp',
+      model: 'gemini-1.5-flash',
       contents: query,
       config: {
         systemInstruction: "You are an expert career counselor specialized in Indian Government Jobs (Sarkari Naukri). Provide accurate, helpful, and professional advice about SSC, UPSC, Banking, Railway, and State Government exams. Keep answers concise and structured.",
