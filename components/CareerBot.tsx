@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { MessageSquare, Send, X, Loader2 } from 'lucide-react';
 import { getCareerAdvice } from '../services/geminiService';
@@ -20,7 +19,8 @@ export const CareerBot: React.FC = () => {
     setIsLoading(true);
 
     const advice = await getCareerAdvice(userMsg);
-    setMessages(prev => [...prev, { role: 'bot', text: advice }]);
+    // Explicitly fallback to empty string or error message if advice is undefined
+    setMessages(prev => [...prev, { role: 'bot', text: advice || "I'm sorry, I couldn't process that request." }]);
     setIsLoading(false);
   };
 
