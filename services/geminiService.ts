@@ -1,6 +1,12 @@
 import { GoogleGenAI } from "@google/genai";
 
-// Always use {apiKey: process.env.API_KEY} for initialization.
+// Fix for TS2580: Cannot find name 'process'
+declare const process: {
+  env: {
+    API_KEY: string;
+  };
+};
+
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 export const getJobSummary = async (jobTitle: string) => {
@@ -9,11 +15,10 @@ export const getJobSummary = async (jobTitle: string) => {
       model: 'gemini-3-flash-preview',
       contents: `Provide a concise, trust-building summary (2-3 sentences) for a Sarkari job notification titled: "${jobTitle}". Highlight why this is a good opportunity for candidates. Format it for an Indian audience.`,
     });
-    // Use .text property directly, not as a function.
-    return response.text;
+    return response.text || "";
   } catch (error) {
     console.error("Error fetching summary from Gemini:", error);
-    return null;
+    return "";
   }
 };
 
@@ -26,8 +31,7 @@ export const getCareerAdvice = async (query: string) => {
         systemInstruction: "You are an expert career counselor specialized in Indian Government Jobs (Sarkari Naukri). Provide accurate, helpful, and professional advice about SSC, UPSC, Banking, Railway, and State Government exams. Keep answers concise and structured.",
       }
     });
-    // Use .text property directly, not as a function.
-    return response.text;
+    return response.text || "I am currently unable to provide advice.";
   } catch (error) {
     console.error("Gemini Error:", error);
     return "I am currently unable to provide advice. Please try again later.";

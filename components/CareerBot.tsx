@@ -2,10 +2,15 @@ import React, { useState } from 'react';
 import { MessageSquare, Send, X, Loader2 } from 'lucide-react';
 import { getCareerAdvice } from '../services/geminiService';
 
+interface Message {
+  role: 'user' | 'bot';
+  text: string;
+}
+
 export const CareerBot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState('');
-  const [messages, setMessages] = useState<{role: 'user' | 'bot', text: string}[]>([
+  const [messages, setMessages] = useState<Message[]>([
     { role: 'bot', text: 'Namaste! I am your AI Career Assistant. Ask me anything about Sarkari Jobs, syllabus, or preparation strategies!' }
   ]);
   const [isLoading, setIsLoading] = useState(false);
@@ -19,8 +24,12 @@ export const CareerBot: React.FC = () => {
     setIsLoading(true);
 
     const advice = await getCareerAdvice(userMsg);
-    // Explicitly fallback to empty string or error message if advice is undefined
-    setMessages(prev => [...prev, { role: 'bot', text: advice || "I'm sorry, I couldn't process that request." }]);
+    const botResponse: Message = { 
+      role: 'bot', 
+      text: advice || "I'm sorry, I couldn't process that request." 
+    };
+    
+    setMessages(prev => [...prev, botResponse]);
     setIsLoading(false);
   };
 
