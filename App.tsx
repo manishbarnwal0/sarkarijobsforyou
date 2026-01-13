@@ -4,6 +4,7 @@ import { Footer } from './components/Footer';
 import { JobSection } from './components/JobSection';
 import { CareerBot } from './components/CareerBot';
 import { ContactPage } from './components/ContactPage';
+import { CategoryListPage } from './components/CategoryListPage';
 import { MOCK_POSTS } from './constants';
 import { Category, CategoryDisplayNames } from './types';
 import { ChevronRight, TrendingUp, Calendar, Zap, MessageSquare } from 'lucide-react';
@@ -25,7 +26,6 @@ const App: React.FC = () => {
 
     window.addEventListener('popstate', handleLocationChange);
     
-    // Clean up if user arrives with hash
     if (window.location.hash) {
       const cleanPath = window.location.hash.replace('#', '') || '/';
       window.history.replaceState(null, '', cleanPath);
@@ -173,12 +173,13 @@ const App: React.FC = () => {
 
   const getRoute = () => {
     if (currentPath === '/contact') return <ContactPage />;
+    if (currentPath === '/category' || currentPath === '/category/') return <CategoryListPage navigate={navigate} />;
     if (currentPath.startsWith('/category/')) {
-      const slug = currentPath.split('/').pop() || '';
+      const slug = currentPath.split('/').filter(Boolean).pop() || '';
       return renderCategoryPage(slug);
     }
     if (currentPath.startsWith('/post/')) {
-      const id = currentPath.split('/').pop() || '';
+      const id = currentPath.split('/').filter(Boolean).pop() || '';
       return renderPost(id);
     }
     return renderHome();
