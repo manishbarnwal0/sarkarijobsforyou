@@ -17,7 +17,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           'vendor-react': ['react', 'react-dom'],
-          'vendor-utils': ['lucide-react', '@google/genai'],
+          'vendor-utils': ['lucide-react'],
         },
       },
     },
