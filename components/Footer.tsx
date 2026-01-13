@@ -2,10 +2,10 @@ import React from 'react';
 import { Mail, Shield, AlertCircle, Info, ExternalLink } from 'lucide-react';
 
 interface FooterProps {
-  navigate: (e: React.MouseEvent<HTMLAnchorElement>) => void;
+  navigate?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ navigate }) => {
+export const Footer: React.FC<FooterProps> = () => {
   return (
     <footer className="bg-gray-900 text-gray-300 pt-12 pb-6">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
@@ -25,11 +25,11 @@ export const Footer: React.FC<FooterProps> = ({ navigate }) => {
           <div>
             <h3 className="text-white font-bold mb-4 flex items-center gap-2"><ExternalLink size={16} /> Important Links</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="/category/ssc-careers" onClick={navigate} className="hover:text-indigo-400 transition-colors">SSC Career</a></li>
-              <li><a href="/category/upsc-notifications" onClick={navigate} className="hover:text-indigo-400 transition-colors">UPSC Notifications</a></li>
-              <li><a href="/category/railway" onClick={navigate} className="hover:text-indigo-400 transition-colors">Railway RRB/RRC</a></li>
-              <li><a href="/category/banking-jobs" onClick={navigate} className="hover:text-indigo-400 transition-colors">Banking Jobs (IBPS/SBI)</a></li>
-              <li><a href="/category/state-police-recruitment" onClick={navigate} className="hover:text-indigo-400 transition-colors">State Police Recruitment</a></li>
+              <li><a href="#/category/ssc-careers" className="hover:text-indigo-400 transition-colors">SSC Career</a></li>
+              <li><a href="#/category/upsc-notifications" className="hover:text-indigo-400 transition-colors">UPSC Notifications</a></li>
+              <li><a href="#/category/railway" className="hover:text-indigo-400 transition-colors">Railway RRB/RRC</a></li>
+              <li><a href="#/category/banking-jobs" className="hover:text-indigo-400 transition-colors">Banking Jobs (IBPS/SBI)</a></li>
+              <li><a href="#/category/state-police-recruitment" className="hover:text-indigo-400 transition-colors">State Police Recruitment</a></li>
             </ul>
           </div>
 
@@ -37,10 +37,10 @@ export const Footer: React.FC<FooterProps> = ({ navigate }) => {
           <div>
             <h3 className="text-white font-bold mb-4 flex items-center gap-2"><Shield size={16} /> Legal & Privacy</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="/about" onClick={navigate} className="hover:text-indigo-400 transition-colors flex items-center gap-1"><Info size={14} /> About Us</a></li>
-              <li><a href="/disclaimer" onClick={navigate} className="hover:text-indigo-400 transition-colors flex items-center gap-1"><AlertCircle size={14} /> Disclaimer</a></li>
-              <li><a href="/privacy-policy" onClick={navigate} className="hover:text-indigo-400 transition-colors flex items-center gap-1"><Shield size={14} /> Privacy Policy</a></li>
-              <li><a href="/contact" onClick={navigate} className="hover:text-indigo-400 transition-colors flex items-center gap-1"><Mail size={14} /> Contact Us</a></li>
+              <li><a href="#/about" className="hover:text-indigo-400 transition-colors flex items-center gap-1"><Info size={14} /> About Us</a></li>
+              <li><a href="#/disclaimer" className="hover:text-indigo-400 transition-colors flex items-center gap-1"><AlertCircle size={14} /> Disclaimer</a></li>
+              <li><a href="#/privacy-policy" className="hover:text-indigo-400 transition-colors flex items-center gap-1"><Shield size={14} /> Privacy Policy</a></li>
+              <li><a href="#/contact" className="hover:text-indigo-400 transition-colors flex items-center gap-1"><Mail size={14} /> Contact Us</a></li>
             </ul>
           </div>
 

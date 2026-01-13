@@ -3,10 +3,10 @@ import { Search, Menu, X, Bell, Facebook, Twitter, Send, MessageCircle } from 'l
 import { NAV_ITEMS } from '../constants';
 
 interface HeaderProps {
-  navigate: (e: React.MouseEvent<HTMLAnchorElement>) => void;
+  navigate?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ navigate }) => {
+export const Header: React.FC<HeaderProps> = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -26,7 +26,7 @@ export const Header: React.FC<HeaderProps> = ({ navigate }) => {
         <div className="flex justify-between items-center h-20 md:h-24">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <a href="/" onClick={navigate} className="flex flex-col">
+            <a href="#/" className="flex flex-col">
               <span className="text-3xl md:text-4xl font-black bg-gradient-to-r from-orange-600 to-indigo-800 bg-clip-text text-transparent tracking-tighter">
                 Sarkari Jobs For You
               </span>
@@ -41,8 +41,7 @@ export const Header: React.FC<HeaderProps> = ({ navigate }) => {
             {NAV_ITEMS.map((item) => (
               <a
                 key={item.label}
-                href={item.path}
-                onClick={navigate}
+                href={`#${item.path}`}
                 className="text-gray-700 hover:text-indigo-700 px-1 py-2 text-[16px] font-black transition-all border-b-4 border-transparent hover:border-indigo-600 tracking-tight"
               >
                 {item.label}
@@ -85,8 +84,8 @@ export const Header: React.FC<HeaderProps> = ({ navigate }) => {
           {NAV_ITEMS.map((item) => (
             <a
               key={item.label}
-              href={item.path}
-              onClick={(e) => { navigate(e); setIsMenuOpen(false); }}
+              href={`#${item.path}`}
+              onClick={() => setIsMenuOpen(false)}
               className="block px-6 py-4 text-lg font-black text-gray-800 hover:bg-indigo-50 hover:text-indigo-700 rounded-xl transition-colors"
             >
               {item.label}
