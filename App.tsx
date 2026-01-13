@@ -180,6 +180,27 @@ const App: React.FC = () => {
           <JobSection title="Answer Key" category={Category.ANSWER_KEY} posts={MOCK_POSTS} color="bg-orange-800" navigate={navigate} />
           <JobSection title="Syllabus" category={Category.SYLLABUS} posts={MOCK_POSTS} color="bg-cyan-800" navigate={navigate} />
         </div>
+
+        {/* SEO Content Section Added Here */}
+        <section className="mt-12 mb-10 bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100">
+          <h2 className="text-2xl md:text-3xl font-black text-indigo-900 mb-6 border-b-2 border-indigo-50 pb-4">
+            Sarkari Jobs For You – Latest Sarkari Naukri & Sarkari Result Updates
+          </h2>
+          <div className="prose prose-indigo max-w-none text-gray-700 leading-relaxed space-y-5 font-medium">
+            <p>
+              Welcome to <strong>Sarkari Jobs For You</strong>, your premier destination for finding the most reliable and up-to-date information regarding various <strong>sarkari jobs</strong> across India. We understand the challenges aspirants face while tracking multiple notifications, which is why our platform is dedicated to aggregating all essential <a href="/category/latest-jobs" onClick={navigate} className="text-indigo-600 font-bold hover:underline">Latest Sarkari Jobs</a> from central and state government departments in one convenient location.
+            </p>
+            <p>
+              Whether you are looking for the latest <strong>sarkari result</strong>, searching for your <a href="/category/admit-card" onClick={navigate} className="text-indigo-600 font-bold hover:underline">Admit Card</a>, or need to verify an official <a href="/category/answer-key" onClick={navigate} className="text-indigo-600 font-bold hover:underline">Answer Key</a>, SarkariJobsForYou.com ensures that every update is verified and timely. Our team monitors official portals including SSC, UPSC, IBPS, and Railway boards to bring you the most accurate <strong>sarkari naukri</strong> notifications immediately after they are released.
+            </p>
+            <p>
+              For candidates focusing on specific sectors, we provide dedicated sections for <a href="/category/banking-jobs" onClick={navigate} className="text-indigo-600 font-bold hover:underline">Banking Sarkari Naukri</a>, <a href="/category/railway" onClick={navigate} className="text-indigo-600 font-bold hover:underline">Railway Jobs</a>, and <a href="/category/state-police-recruitment" onClick={navigate} className="text-indigo-600 font-bold hover:underline">Police Jobs</a>. We also cover detailed <a href="/category/syllabus" onClick={navigate} className="text-indigo-600 font-bold hover:underline">Exam Syllabus</a> and patterns for highly competitive exams such as <a href="/category/ssc-careers" onClick={navigate} className="text-indigo-600 font-bold hover:underline">SSC Jobs</a> and <a href="/category/upsc-notifications" onClick={navigate} className="text-indigo-600 font-bold hover:underline">UPSC Exams</a>, helping you stay ahead in your preparation journey.
+            </p>
+            <p>
+              At <strong>sarkari jobs for you</strong>, our mission is to empower every job seeker with the right information at the right time. We take pride in being a trustworthy resource for millions of students who rely on us for fast updates and clear guidance. Stay connected with us for the latest news on upcoming <strong>sarkari jobs</strong> and academic results that could shape your professional future.
+            </p>
+          </div>
+        </section>
       </main>
     );
   };
