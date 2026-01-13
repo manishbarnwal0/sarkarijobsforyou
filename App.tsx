@@ -77,48 +77,69 @@ const App: React.FC = () => {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Breadcrumb items={breadcrumbs} navigate={navigate} />
 
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-          <div className="bg-indigo-900 px-6 py-8 text-white">
-            <h1 className="text-3xl md:text-4xl font-black mb-4 uppercase tracking-tight">{displayName}</h1>
-            <p className="text-indigo-50 text-sm md:text-base leading-relaxed max-w-4xl opacity-90">
+        <section className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-8">
+          <header className="bg-indigo-900 px-6 py-10 text-white">
+            <h1 className="text-3xl md:text-5xl font-black mb-6 uppercase tracking-tight leading-tight">
+              {displayName}
+            </h1>
+            <p className="text-indigo-50 text-base md:text-lg leading-relaxed max-w-4xl opacity-95">
               {seoDescription}
             </p>
-          </div>
+          </header>
 
           <div className="divide-y divide-gray-100">
             {posts.length > 0 ? (
               posts.map((post) => (
-                <div key={post.id} className="p-6 hover:bg-gray-50 transition-colors">
-                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <article key={post.id} className="p-6 md:p-8 hover:bg-gray-50 transition-colors">
+                  <div className="flex flex-col md:flex-row md:items-start justify-between gap-6">
                     <div className="flex-1">
-                      <a href={`/post/${post.id}`} onClick={navigate} className="text-xl font-bold text-blue-800 hover:text-indigo-700 leading-tight block mb-2">
-                        {post.title}
-                      </a>
-                      <p className="text-gray-600 text-sm line-clamp-2 mb-3">
+                      <h2 className="mb-3">
+                        <a href={`/post/${post.id}`} onClick={navigate} className="text-xl md:text-2xl font-bold text-blue-800 hover:text-indigo-700 leading-tight block">
+                          {post.title}
+                        </a>
+                      </h2>
+                      <p className="text-gray-600 text-sm md:text-base line-clamp-2 mb-4 leading-relaxed">
                         {post.description}
                       </p>
-                      <div className="flex items-center gap-4 text-xs font-bold uppercase tracking-wider text-gray-400">
-                        <span className="flex items-center gap-1">📅 {post.postDate}</span>
-                        <span className="flex items-center gap-1 text-indigo-600">📍 {post.organization}</span>
-                      </div>
+                      <footer className="flex items-center gap-5 text-xs font-bold uppercase tracking-wider text-gray-400">
+                        <span className="flex items-center gap-1.5 whitespace-nowrap">
+                          <time dateTime={post.postDate}>📅 {post.postDate}</time>
+                        </span>
+                        <span className="flex items-center gap-1.5 text-indigo-600 truncate">
+                          📍 {post.organization}
+                        </span>
+                      </footer>
                     </div>
-                    <a 
-                      href={`/post/${post.id}`}
-                      onClick={navigate}
-                      className="inline-flex items-center justify-center px-6 py-2 bg-indigo-600 text-white rounded-lg font-black text-sm hover:bg-indigo-700 transition-colors shrink-0"
-                    >
-                      READ MORE
-                    </a>
+                    <div className="shrink-0">
+                      <a 
+                        href={`/post/${post.id}`}
+                        onClick={navigate}
+                        className="inline-flex items-center justify-center px-8 py-3 bg-indigo-600 text-white rounded-lg font-black text-sm hover:bg-indigo-700 transition-colors shadow-sm"
+                      >
+                        READ FULL DETAILS
+                      </a>
+                    </div>
                   </div>
-                </div>
+                </article>
               ))
             ) : (
-              <div className="p-20 text-center text-gray-400 font-bold text-xl italic">
-                No articles published in this category yet.
+              <div className="p-20 text-center">
+                <p className="text-gray-500 font-bold text-xl italic mb-2">No posts are currently available in this category.</p>
+                <p className="text-gray-400 text-sm">Please check back later for updates.</p>
               </div>
             )}
           </div>
-        </div>
+        </section>
+
+        <nav className="flex justify-center mt-12 mb-8">
+          <a 
+            href="/category/" 
+            onClick={navigate}
+            className="text-indigo-600 font-bold hover:text-indigo-800 hover:underline flex items-center gap-2 border border-indigo-100 px-6 py-3 rounded-full bg-indigo-50 transition-all"
+          >
+            View all categories
+          </a>
+        </nav>
       </main>
     );
   };
