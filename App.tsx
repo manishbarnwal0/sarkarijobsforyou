@@ -4,21 +4,41 @@ import { Footer } from './components/Footer';
 import { JobSection } from './components/JobSection';
 import { CareerBot } from './components/CareerBot';
 import { ContactPage } from './components/ContactPage';
+import { CategoryListPage } from './components/CategoryListPage';
 import { MOCK_POSTS } from './constants';
 import { Category, CategoryDisplayNames } from './types';
 import { ChevronRight, TrendingUp, Calendar, Zap, MessageSquare } from 'lucide-react';
 
 const App: React.FC = () => {
-  const [currentHash, setCurrentHash] = useState(window.location.hash || '#/');
+  const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
   useEffect(() => {
-    const handleHashChange = () => {
-      setCurrentHash(window.location.hash || '#/');
+    const handleLocationChange = () => {
+      setCurrentPath(window.location.pathname);
       window.scrollTo(0, 0);
     };
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
+
+    window.addEventListener('popstate', handleLocationChange);
+    
+    // Auto-fix legacy hash URLs to clean paths
+    if (window.location.hash.startsWith('#/')) {
+      const cleanPath = window.location.hash.replace('#', '');
+      window.history.replaceState(null, '', cleanPath);
+      handleLocationChange();
+    }
+
+    return () => window.removeEventListener('popstate', handleLocationChange);
   }, []);
+
+  const navigate = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const href = e.currentTarget.getAttribute('href');
+    if (href && href.startsWith('/')) {
+      e.preventDefault();
+      window.history.pushState(null, '', href);
+      setCurrentPath(href);
+      window.scrollTo(0, 0);
+    }
+  };
 
   const renderCategoryPage = (slug: string) => {
     const categoryKey = Object.values(Category).find(val => val === slug) as Category;
@@ -30,7 +50,7 @@ const App: React.FC = () => {
     return (
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <nav className="flex items-center text-sm text-gray-500 mb-6 font-medium">
-          <a href="#/" className="hover:text-indigo-600">Home</a>
+          <a href="/" onClick={navigate} className="hover:text-indigo-600">Home</a>
           <ChevronRight size={14} className="mx-2" />
           <span className="text-gray-900">{displayName}</span>
         </nav>
@@ -49,7 +69,7 @@ const App: React.FC = () => {
                 <div key={post.id} className="p-6 hover:bg-gray-50 transition-colors">
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div className="flex-1">
-                      <a href={`#/post/${post.id}`} className="text-xl font-bold text-blue-800 hover:text-indigo-700 leading-tight block mb-2">
+                      <a href={`/post/${post.id}`} onClick={navigate} className="text-xl font-bold text-blue-800 hover:text-indigo-700 leading-tight block mb-2">
                         {post.title}
                       </a>
                       <p className="text-gray-600 text-sm line-clamp-2 mb-3">
@@ -61,7 +81,8 @@ const App: React.FC = () => {
                       </div>
                     </div>
                     <a 
-                      href={`#/post/${post.id}`}
+                      href={`/post/${post.id}`}
+                      onClick={navigate}
                       className="inline-flex items-center justify-center px-6 py-2 bg-indigo-600 text-white rounded-lg font-black text-sm hover:bg-indigo-700 transition-colors shrink-0"
                     >
                       READ MORE
@@ -101,7 +122,7 @@ const App: React.FC = () => {
             { label: 'Results', slug: Category.RESULT, icon: <Zap size={22} className="text-rose-600" />, color: 'border-rose-200 bg-rose-50' },
             { label: 'Syllabus', slug: Category.SYLLABUS, icon: <MessageSquare size={22} className="text-amber-600" />, color: 'border-amber-200 bg-amber-50' },
           ].map((item, i) => (
-            <a key={i} href={`#/category/${item.slug}`} className={`${item.color} border-2 p-4 rounded-xl flex items-center justify-center gap-4 hover:shadow-lg transition-all group shadow-sm`}>
+            <a key={i} href={`/category/${item.slug}`} onClick={navigate} className={`${item.color} border-2 p-4 rounded-xl flex items-center justify-center gap-4 hover:shadow-lg transition-all group shadow-sm`}>
               <div className="bg-white p-3 rounded-full shadow-md group-hover:scale-110 transition-transform">{item.icon}</div>
               <span className="text-[15px] md:text-[17px] font-black text-gray-800 tracking-tight">{item.label}</span>
             </a>
@@ -109,19 +130,18 @@ const App: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <JobSection title="Latest Jobs" category={Category.LATEST_JOB} posts={MOCK_POSTS} color="bg-blue-800" navigate={() => {}} />
-          <JobSection title="Admit Card" category={Category.ADMIT_CARD} posts={MOCK_POSTS} color="bg-emerald-800" navigate={() => {}} />
-          <JobSection title="Results" category={Category.RESULT} posts={MOCK_POSTS} color="bg-red-800" navigate={() => {}} />
-          <JobSection title="Admission" category={Category.ADMISSION} posts={MOCK_POSTS} color="bg-purple-800" navigate={() => {}} />
-          <JobSection title="Answer Key" category={Category.ANSWER_KEY} posts={MOCK_POSTS} color="bg-orange-800" navigate={() => {}} />
-          <JobSection title="Syllabus" category={Category.SYLLABUS} posts={MOCK_POSTS} color="bg-cyan-800" navigate={() => {}} />
+          <JobSection title="Latest Jobs" category={Category.LATEST_JOB} posts={MOCK_POSTS} color="bg-blue-800" navigate={navigate} />
+          <JobSection title="Admit Card" category={Category.ADMIT_CARD} posts={MOCK_POSTS} color="bg-emerald-800" navigate={navigate} />
+          <JobSection title="Results" category={Category.RESULT} posts={MOCK_POSTS} color="bg-red-800" navigate={navigate} />
+          <JobSection title="Admission" category={Category.ADMISSION} posts={MOCK_POSTS} color="bg-purple-800" navigate={navigate} />
+          <JobSection title="Answer Key" category={Category.ANSWER_KEY} posts={MOCK_POSTS} color="bg-orange-800" navigate={navigate} />
+          <JobSection title="Syllabus" category={Category.SYLLABUS} posts={MOCK_POSTS} color="bg-cyan-800" navigate={navigate} />
         </div>
       </main>
     );
   };
 
-  const renderPost = () => {
-    const postId = currentHash.split('/').pop();
+  const renderPost = (postId: string) => {
     const post = MOCK_POSTS.find(p => p.id === postId);
     if (!post) return <div className="p-20 text-center font-black text-gray-400 text-2xl">Post Not Found</div>;
     return (
@@ -146,24 +166,26 @@ const App: React.FC = () => {
   };
 
   const getRoute = () => {
-    if (currentHash === '#/contact') return <ContactPage />;
-    if (currentHash.startsWith('#/category/')) {
-      const slug = currentHash.replace('#/category/', '');
+    if (currentPath === '/contact') return <ContactPage />;
+    if (currentPath === '/category' || currentPath === '/category/') return <CategoryListPage navigate={navigate} />;
+    if (currentPath.startsWith('/category/')) {
+      const slug = currentPath.split('/').filter(Boolean).pop() || '';
       return renderCategoryPage(slug);
     }
-    if (currentHash.startsWith('#/post/')) {
-      return renderPost();
+    if (currentPath.startsWith('/post/')) {
+      const id = currentPath.split('/').filter(Boolean).pop() || '';
+      return renderPost(id);
     }
     return renderHome();
   };
 
   return (
     <div className="min-h-screen flex flex-col selection:bg-indigo-200">
-      <Header navigate={() => {}} />
+      <Header navigate={navigate} />
       <div className="flex-grow">
         {getRoute()}
       </div>
-      <Footer navigate={() => {}} />
+      <Footer navigate={navigate} />
       <CareerBot />
     </div>
   );
