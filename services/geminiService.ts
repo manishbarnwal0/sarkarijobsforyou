@@ -1,12 +1,11 @@
 import { GoogleGenAI } from "@google/genai";
 
-// Initialize the API with the key from environment variables
-// Always use new GoogleGenAI({apiKey: process.env.API_KEY})
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || "" });
-
 export const getJobSummary = async (jobTitle: string) => {
-  if (!process.env.API_KEY) return "";
+  const apiKey = process.env.API_KEY;
+  if (!apiKey) return "";
+  
   try {
+    const ai = new GoogleGenAI({ apiKey });
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
       contents: `Provide a concise, trust-building summary (2-3 sentences) for a Sarkari job notification titled: "${jobTitle}". Highlight why this is a good opportunity for candidates. Format it for an Indian audience.`,
@@ -19,8 +18,11 @@ export const getJobSummary = async (jobTitle: string) => {
 };
 
 export const getCareerAdvice = async (query: string) => {
-  if (!process.env.API_KEY) return "Career advice is currently unavailable. Please check your configuration.";
+  const apiKey = process.env.API_KEY;
+  if (!apiKey) return "Career advice is currently unavailable. Please check your configuration.";
+  
   try {
+    const ai = new GoogleGenAI({ apiKey });
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
       contents: query,
