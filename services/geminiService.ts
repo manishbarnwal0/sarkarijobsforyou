@@ -1,6 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
 
 // Initialize the API with the key from environment variables
+// Always use new GoogleGenAI({apiKey: process.env.API_KEY})
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || "" });
 
 export const getJobSummary = async (jobTitle: string) => {
@@ -18,7 +19,7 @@ export const getJobSummary = async (jobTitle: string) => {
 };
 
 export const getCareerAdvice = async (query: string) => {
-  if (!process.env.API_KEY) return "API Key not configured.";
+  if (!process.env.API_KEY) return "Career advice is currently unavailable. Please check your configuration.";
   try {
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
