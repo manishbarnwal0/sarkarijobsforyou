@@ -5,11 +5,11 @@ import { JobSection } from './components/JobSection';
 import { CareerBot } from './components/CareerBot';
 import { ContactPage } from './components/ContactPage';
 import { CategoryListPage } from './components/CategoryListPage';
+import { Breadcrumb } from './components/Breadcrumb';
 import { MOCK_POSTS } from './constants';
 import { Category, CategoryDisplayNames } from './types';
-import { ChevronRight, TrendingUp, Calendar, Zap, MessageSquare } from 'lucide-react';
+import { TrendingUp, Calendar, Zap, MessageSquare } from 'lucide-react';
 
-// Using components defined in existing files for SPA routing
 import AboutPage from './app/about/page';
 import DisclaimerPage from './app/disclaimer/page';
 import PrivacyPolicyPage from './app/privacy-policy/page';
@@ -41,7 +41,6 @@ const App: React.FC = () => {
 
     window.addEventListener('popstate', handleLocationChange);
     
-    // Auto-fix legacy hash URLs to clean paths
     if (window.location.hash.startsWith('#/')) {
       const cleanPath = window.location.hash.replace('#', '');
       window.history.replaceState(null, '', cleanPath);
@@ -69,13 +68,14 @@ const App: React.FC = () => {
 
     document.title = `${displayName} – SarkariJobsForYou`;
 
+    const breadcrumbs = [
+      { label: 'Home', path: '/' },
+      { label: displayName }
+    ];
+
     return (
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <nav className="flex items-center text-sm text-gray-500 mb-6 font-medium">
-          <a href="/" onClick={navigate} className="hover:text-indigo-600">Home</a>
-          <ChevronRight size={14} className="mx-2" />
-          <span className="text-gray-900">{displayName}</span>
-        </nav>
+        <Breadcrumb items={breadcrumbs} navigate={navigate} />
 
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
           <div className="bg-indigo-900 px-6 py-8 text-white">
@@ -166,12 +166,22 @@ const App: React.FC = () => {
   const renderPost = (postId: string) => {
     const post = MOCK_POSTS.find(p => p.id === postId);
     if (!post) return <div className="p-20 text-center font-black text-gray-400 text-2xl">Post Not Found</div>;
+
+    const categoryDisplayName = CategoryDisplayNames[post.category];
+    const breadcrumbs = [
+      { label: 'Home', path: '/' },
+      { label: categoryDisplayName, path: `/category/${post.category}` },
+      { label: post.title }
+    ];
+
     return (
       <main className="max-w-5xl mx-auto px-4 py-10">
+        <Breadcrumb items={breadcrumbs} navigate={navigate} />
+        
         <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
           <div className="bg-gray-50 p-8 md:p-12 border-b-4 border-indigo-600 text-center">
              <div className="flex justify-center gap-3 mb-6">
-                <span className="bg-indigo-700 text-white px-5 py-1.5 rounded-full text-[12px] font-black uppercase tracking-wider">{CategoryDisplayNames[post.category]}</span>
+                <span className="bg-indigo-700 text-white px-5 py-1.5 rounded-full text-[12px] font-black uppercase tracking-wider">{categoryDisplayName}</span>
              </div>
              <h1 className="text-3xl md:text-5xl font-black text-gray-900 leading-[1.2] mb-6">{post.title}</h1>
           </div>
