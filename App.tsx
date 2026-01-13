@@ -9,6 +9,12 @@ import { MOCK_POSTS } from './constants';
 import { Category, CategoryDisplayNames } from './types';
 import { ChevronRight, TrendingUp, Calendar, Zap, MessageSquare } from 'lucide-react';
 
+// Re-importing components for consistency if they are moved to app directory logic later
+// For now, we handle them as internal SPA routes for compatibility with the current App.tsx structure
+import AboutPage from './app/about/page';
+import DisclaimerPage from './app/disclaimer/page';
+import PrivacyPolicyPage from './app/privacy-policy/page';
+
 const App: React.FC = () => {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
@@ -20,7 +26,6 @@ const App: React.FC = () => {
 
     window.addEventListener('popstate', handleLocationChange);
     
-    // Auto-fix legacy hash URLs to clean paths
     if (window.location.hash.startsWith('#/')) {
       const cleanPath = window.location.hash.replace('#', '');
       window.history.replaceState(null, '', cleanPath);
@@ -167,6 +172,9 @@ const App: React.FC = () => {
 
   const getRoute = () => {
     if (currentPath === '/contact') return <ContactPage />;
+    if (currentPath === '/about') return <AboutPage />;
+    if (currentPath === '/disclaimer') return <DisclaimerPage />;
+    if (currentPath === '/privacy-policy') return <PrivacyPolicyPage />;
     if (currentPath === '/category' || currentPath === '/category/') return <CategoryListPage navigate={navigate} />;
     if (currentPath.startsWith('/category/')) {
       const slug = currentPath.split('/').filter(Boolean).pop() || '';
