@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   ArrowRight, 
@@ -18,6 +17,7 @@ interface JobSectionProps {
   category: Category;
   posts: JobPost[];
   color: string;
+  navigate: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
 const categoryIconMap: Record<string, React.ReactNode> = {
@@ -32,7 +32,7 @@ const categoryIconMap: Record<string, React.ReactNode> = {
   [Category.BIHAR_SPECIAL]: <MapPin size={16} />,
 };
 
-export const JobSection: React.FC<JobSectionProps> = ({ title, category, posts, color }) => {
+export const JobSection: React.FC<JobSectionProps> = ({ title, category, posts, color, navigate }) => {
   const filteredPosts = posts.filter(post => post.category === category).slice(0, 10);
 
   return (
@@ -42,7 +42,7 @@ export const JobSection: React.FC<JobSectionProps> = ({ title, category, posts, 
           {categoryIconMap[category] || <Flame size={16} />}
           {title}
         </h3>
-        <a href={`#/category/${category}`} className="text-[13px] font-semibold hover:underline flex items-center gap-0.5 opacity-90">
+        <a href={`/category/${category}`} onClick={navigate} className="text-[13px] font-semibold hover:underline flex items-center gap-0.5 opacity-90">
           View More <ArrowRight size={12} />
         </a>
       </div>
@@ -52,7 +52,8 @@ export const JobSection: React.FC<JobSectionProps> = ({ title, category, posts, 
           filteredPosts.map((post) => (
             <a
               key={post.id}
-              href={`#/post/${post.id}`}
+              href={`/post/${post.id}`}
+              onClick={navigate}
               className="group flex flex-col p-3.5 hover:bg-blue-50/50 transition-all cursor-pointer border-l-4 border-transparent hover:border-blue-600"
             >
               <div className="flex items-start gap-2">
