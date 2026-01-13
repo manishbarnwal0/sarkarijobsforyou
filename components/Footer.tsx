@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Shield, AlertCircle, Info, ExternalLink } from 'lucide-react';
+import { Mail, Shield, AlertCircle, Info, ExternalLink, List } from 'lucide-react';
 
 interface FooterProps {
   navigate: (e: React.MouseEvent<HTMLAnchorElement>) => void;
@@ -37,6 +37,7 @@ export const Footer: React.FC<FooterProps> = ({ navigate }) => {
           <div>
             <h3 className="text-white font-bold mb-4 flex items-center gap-2"><Shield size={16} /> Legal & Privacy</h3>
             <ul className="space-y-2 text-sm">
+              <li><a href="/category/" onClick={navigate} className="hover:text-indigo-400 transition-colors flex items-center gap-1"><List size={14} /> Categories</a></li>
               <li><a href="/about" onClick={navigate} className="hover:text-indigo-400 transition-colors flex items-center gap-1"><Info size={14} /> About Us</a></li>
               <li><a href="/disclaimer" onClick={navigate} className="hover:text-indigo-400 transition-colors flex items-center gap-1"><AlertCircle size={14} /> Disclaimer</a></li>
               <li><a href="/privacy-policy" onClick={navigate} className="hover:text-indigo-400 transition-colors flex items-center gap-1"><Shield size={14} /> Privacy Policy</a></li>
