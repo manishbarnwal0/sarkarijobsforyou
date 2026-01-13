@@ -9,11 +9,26 @@ import { MOCK_POSTS } from './constants';
 import { Category, CategoryDisplayNames } from './types';
 import { ChevronRight, TrendingUp, Calendar, Zap, MessageSquare } from 'lucide-react';
 
-// Re-importing components for consistency if they are moved to app directory logic later
-// For now, we handle them as internal SPA routes for compatibility with the current App.tsx structure
+// Using components defined in existing files for SPA routing
 import AboutPage from './app/about/page';
 import DisclaimerPage from './app/disclaimer/page';
 import PrivacyPolicyPage from './app/privacy-policy/page';
+
+const CATEGORY_SEO_DESCRIPTIONS: Record<string, string> = {
+  [Category.LATEST_JOB]: "Stay updated with the latest government job notifications from both central and state government departments. We provide daily updates on new vacancies, eligibility criteria, and application links for various sarkari recruitment drives across India. Our team monitors official gazettes and portals to ensure you never miss an opportunity to apply for your dream government career in departments like SSC, Railway, Banking, and Defense.",
+  [Category.ADMIT_CARD]: "Find all government exam admit cards, hall tickets, and call letters here. We provide timely information regarding exam dates, city intimation slips, and step-by-step instructions to download your admit cards from official recruitment portals. Whether it is for SSC, UPSC, IBPS, or State exams, ensure you have your hall ticket ready for the examination day by following our direct download links.",
+  [Category.RESULT]: "Check the latest government exam results, merit lists, and cut-off marks. We cover comprehensive updates for all major competitive exams including results for written tests, interviews, and final selection lists. Stay informed about your performance and next steps in the selection process with our real-time result alerts and direct score-card download facilities for various sarkari exams.",
+  [Category.ADMISSION]: "Explore admission notifications for top universities, colleges, and national-level entrance exams. We provide detailed information on counselling schedules, application forms, and eligibility for courses like CUET, NEET, JEE, and other professional degrees. Stay updated with the latest academic alerts, fee structures, and admission procedures to secure your seat in prestigious educational institutions.",
+  [Category.ANSWER_KEY]: "Access official answer keys and response sheets for various government and entrance examinations. We provide direct links to check provisional answer keys and guidance on the official objection process for challenging incorrect answers. Use our resources to estimate your scores and analyze your performance before the final results are announced by the respective recruiting authorities.",
+  [Category.SYLLABUS]: "Get detailed exam syllabus and latest exam patterns for all major government competitive exams. We offer subject-wise topics, marking schemes, and preparation guidance to help you plan your studies effectively. Understanding the official syllabus is the first step toward success in exams like SSC CGL, UPSC, BPSC, and others, and we ensure you have the most accurate information.",
+  [Category.BIHAR_SPECIAL]: "Dedicated section for all Bihar Board exams, results, and notifications. We cover everything related to BSEB Matric and Intermediate exams, including model papers, admit cards, and latest compartmental updates. For Bihar state government job seekers, this section provides focused alerts for BSSC, BPSC, and Bihar Police recruitment to help you stay ahead.",
+  [Category.FEATURED_UPDATES]: "Catch up on important educational news, national policy updates, and significant exam alerts. This section features the most critical information regarding changes in recruitment rules, scholarship announcements, and major educational reforms in India. Stay informed about the latest trends and essential notifications that impact students and job aspirants nationwide.",
+  [Category.SSC_CAREERS]: "Comprehensive coverage of all Staff Selection Commission (SSC) exams including CGL, CHSL, GD Constable, MTS, JE, and CPO. We provide the latest notifications, exam calendars, admit cards, and results specifically for SSC aspirants. Follow our updates to stay informed about every stage of the SSC recruitment cycle and departmental vacancy announcements.",
+  [Category.UPSC_NOTIFICATIONS]: "Follow all Union Public Service Commission (UPSC) notifications for prestigious services including IAS, IPS, CDS, NDA, and CAPF. We offer timely updates on official exam calendars, detailed vacancy circulars, and result declarations. Stay connected for professional guidance on the UPSC examination process and direct links to official UPSC documentations.",
+  [Category.RAILWAY]: "Latest Railway recruitment updates for RRB and RRC including NTPC, Group D, ALP, Technician, and RPF posts. We provide information on online application forms, exam schedules, physical efficiency tests (PET), and final results for the Indian Railways. Monitor this section for massive vacancy announcements and direct links to regional RRB portals.",
+  [Category.BANKING_JOBS]: "Your source for all Banking sector jobs including IBPS PO, Clerk, SBI Career, RBI Grade B, and NABARD notifications. We cover recruitment for public sector banks and specialized financial institutions. Stay updated with preliminary and main exam dates, interview schedules, and banking awareness resources to build a successful career in the Indian financial sector.",
+  [Category.STATE_POLICE]: "Get updates on State Police recruitment exams for Constable, Sub-Inspector (SI), and Jail Warder posts across different states. We provide detailed info on physical test (PET/PST) requirements, written exam syllabus, and result announcements. Stay informed about state-wise police vacancy notifications and selection procedures to serve in the law enforcement departments."
+};
 
 const App: React.FC = () => {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
@@ -26,6 +41,7 @@ const App: React.FC = () => {
 
     window.addEventListener('popstate', handleLocationChange);
     
+    // Auto-fix legacy hash URLs to clean paths
     if (window.location.hash.startsWith('#/')) {
       const cleanPath = window.location.hash.replace('#', '');
       window.history.replaceState(null, '', cleanPath);
@@ -49,6 +65,7 @@ const App: React.FC = () => {
     const categoryKey = Object.values(Category).find(val => val === slug) as Category;
     const displayName = categoryKey ? CategoryDisplayNames[categoryKey] : slug;
     const posts = MOCK_POSTS.filter(p => p.category === categoryKey);
+    const seoDescription = (categoryKey && CATEGORY_SEO_DESCRIPTIONS[categoryKey]) || `Latest ${displayName} updates and notifications for government exams.`;
 
     document.title = `${displayName} – SarkariJobsForYou`;
 
@@ -62,9 +79,9 @@ const App: React.FC = () => {
 
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
           <div className="bg-indigo-900 px-6 py-8 text-white">
-            <h1 className="text-3xl md:text-4xl font-black mb-2 uppercase tracking-tight">{displayName}</h1>
-            <p className="text-indigo-100 opacity-80 font-medium">
-              Latest {displayName} updates, notifications, and direct links for government exams.
+            <h1 className="text-3xl md:text-4xl font-black mb-4 uppercase tracking-tight">{displayName}</h1>
+            <p className="text-indigo-50 text-sm md:text-base leading-relaxed max-w-4xl opacity-90">
+              {seoDescription}
             </p>
           </div>
 
