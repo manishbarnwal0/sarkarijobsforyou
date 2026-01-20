@@ -8,7 +8,7 @@ import { CategoryListPage } from './components/CategoryListPage';
 import { Breadcrumb } from './components/Breadcrumb';
 import { MOCK_POSTS } from './constants';
 import { Category, CategoryDisplayNames } from './types';
-import { TrendingUp, Calendar, Zap, MessageSquare } from 'lucide-react';
+import { TrendingUp, Calendar, Zap, MessageSquare, User, Clock } from 'lucide-react';
 
 import AboutPage from './app/about/page';
 import DisclaimerPage from './app/disclaimer/page';
@@ -220,21 +220,34 @@ const App: React.FC = () => {
       <main className="max-w-5xl mx-auto px-4 py-10">
         <Breadcrumb items={breadcrumbs} navigate={navigate} />
         
-        <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
-          <div className="bg-gray-50 p-8 md:p-12 border-b-4 border-indigo-600 text-center">
-             <div className="flex justify-center gap-3 mb-6">
+        <article className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+          <header className="bg-gray-50 p-8 md:p-12 border-b-4 border-indigo-600 text-center">
+             <div className="flex flex-wrap justify-center items-center gap-4 mb-6">
                 <span className="bg-indigo-700 text-white px-5 py-1.5 rounded-full text-[12px] font-black uppercase tracking-wider">{categoryDisplayName}</span>
+                <span className="flex items-center gap-1.5 text-gray-500 text-sm font-bold">
+                  <User size={16} /> Manish Kumar
+                </span>
+                <span className="flex items-center gap-1.5 text-gray-500 text-sm font-bold">
+                  <Clock size={16} /> {post.postDate}
+                </span>
              </div>
              <h1 className="text-3xl md:text-5xl font-black text-gray-900 leading-[1.2] mb-6">{post.title}</h1>
+          </header>
+          
+          <div className="p-8 md:p-12">
+            {post.content ? (
+              <div className="prose prose-indigo max-w-none text-gray-800 leading-relaxed space-y-6 post-content-area" dangerouslySetInnerHTML={{ __html: post.content }}></div>
+            ) : (
+              <div className="space-y-12">
+                <div className="bg-yellow-50 p-6 rounded-lg border-l-8 border-yellow-500 text-[18px] text-yellow-950 leading-relaxed font-bold">{post.description}</div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <a href={post.link} className="flex items-center justify-center gap-3 p-5 bg-green-600 text-white rounded-xl font-black text-[18px] shadow-xl">Apply Online <span>↗</span></a>
+                    <a href={post.link} className="flex items-center justify-center gap-3 p-5 bg-blue-600 text-white rounded-xl font-black text-[18px] shadow-xl">Download PDF <span>↓</span></a>
+                </div>
+              </div>
+            )}
           </div>
-          <div className="p-8 md:p-12 space-y-12">
-            <div className="bg-yellow-50 p-6 rounded-lg border-l-8 border-yellow-500 text-[18px] text-yellow-950 leading-relaxed font-bold">{post.description}</div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <a href={post.link} className="flex items-center justify-center gap-3 p-5 bg-green-600 text-white rounded-xl font-black text-[18px] shadow-xl">Apply Online <span>↗</span></a>
-                <a href={post.link} className="flex items-center justify-center gap-3 p-5 bg-blue-600 text-white rounded-xl font-black text-[18px] shadow-xl">Download PDF <span>↓</span></a>
-            </div>
-          </div>
-        </div>
+        </article>
       </main>
     );
   };
