@@ -17,8 +17,8 @@ export const Header: React.FC<HeaderProps> = ({ navigate }) => {
           <span className="flex items-center gap-2 animate-pulse"><Bell size={14} className="text-yellow-400" /> Latest Update: RPF Online Form 2024 Started!</span>
         </div>
         <div className="flex items-center space-x-6">
-          <a href="#" className="hover:text-blue-300 flex items-center gap-1.5 transition-colors"><Send size={14} /> Join Telegram</a>
-          <a href="#" className="hover:text-green-300 flex items-center gap-1.5 transition-colors"><MessageCircle size={14} /> WhatsApp Group</a>
+          <a href="https://t.me/sarkarischemejob" target="_blank" rel="noopener noreferrer" className="hover:text-blue-300 flex items-center gap-1.5 transition-colors"><Send size={14} /> Join Telegram</a>
+          <a href="https://whatsapp.com/channel/0029VarbSH90LKZNUHEeYJ36" target="_blank" rel="noopener noreferrer" className="hover:text-green-300 flex items-center gap-1.5 transition-colors"><MessageCircle size={14} /> WhatsApp Group</a>
         </div>
       </div>
 
