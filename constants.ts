@@ -43,10 +43,10 @@ export const MOCK_POSTS: JobPost[] = [
       
       <p>Interested and eligible candidates can apply online through the official RBI recruitment portal within the prescribed dates. All important details such as eligibility criteria, age limit, application fee, selection process, exam pattern, and how to apply are explained below.</p>
 
-      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">RBI Office Attendant Recruitment 2026 – Overview</h2>
+      <h2 style="color: #1e3a8a; padding-bottom: 8px;">RBI Office Attendant Recruitment 2026 – Overview</h2>
       <p>This recruitment is conducted by the Reserve Bank of India to select candidates for the post of Office Attendant in various regional offices. Selection is based on an Online Test followed by a Language Proficiency Test (LPT) in the respective regional language.</p>
 
-      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">Important Dates</h2>
+      <h2 style="color: #1e3a8a; padding-bottom: 8px;">Important Dates</h2>
       <table border="1" style="width: 100%; border-collapse: collapse; margin-bottom: 16px;">
         <thead style="background-color: #f3f4f6;">
           <tr>
@@ -55,17 +55,16 @@ export const MOCK_POSTS: JobPost[] = [
           </tr>
         </thead>
         <tbody>
-          <tr><td style="border: 1px solid #d1d5db; padding: 10px;">Notification Release Date</td><td style="border: 1px solid #d1d5db; padding: 10px;">January 2026</td></tr>
-          <tr><td style="border: 1px solid #d1d5db; padding: 10px;">Online Application Start Date</td><td style="border: 1px solid #d1d5db; padding: 10px;">January 2026</td></tr>
-          <tr><td style="border: 1px solid #d1d5db; padding: 10px;">Last Date to Apply Online</td><td style="border: 1px solid #d1d5db; padding: 10px;">February 2026</td></tr>
-          <tr><td style="border: 1px solid #d1d5db; padding: 10px;">Last Date for Fee Payment</td><td style="border: 1px solid #d1d5db; padding: 10px;">February 2026</td></tr>
-          <tr><td style="border: 1px solid #d1d5db; padding: 10px;">Online Examination Date</td><td style="border: 1px solid #d1d5db; padding: 10px;">March / April 2026</td></tr>
-          <tr><td style="border: 1px solid #d1d5db; padding: 10px;">Admit Card Release</td><td style="border: 1px solid #d1d5db; padding: 10px;">Before Exam</td></tr>
+          <tr><td style="border: 1px solid #d1d5db; padding: 10px;">Application Begin</td><td style="border: 1px solid #d1d5db; padding: 10px;">15/01/2026</td></tr>
+          <tr><td style="border: 1px solid #d1d5db; padding: 10px;">Last Date for Apply Online</td><td style="border: 1px solid #d1d5db; padding: 10px;">04/02/2026</td></tr>
+          <tr><td style="border: 1px solid #d1d5db; padding: 10px;">Last Date Pay Exam Fee</td><td style="border: 1px solid #d1d5db; padding: 10px;">04/02/2026</td></tr>
+          <tr><td style="border: 1px solid #d1d5db; padding: 10px;">Exam Date</td><td style="border: 1px solid #d1d5db; padding: 10px;">28/02/2026 & 01/03/2026</td></tr>
+          <tr><td style="border: 1px solid #d1d5db; padding: 10px;">Admit Card Available</td><td style="border: 1px solid #d1d5db; padding: 10px;">Before Exam</td></tr>
         </tbody>
       </table>
       <p><em>*Exact dates will be updated as per official RBI notice.</em></p>
 
-      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">Application Fee</h2>
+      <h2 style="color: #1e3a8a; padding-bottom: 8px;">Application Fee</h2>
       <table border="1" style="width: 100%; border-collapse: collapse; margin-bottom: 16px;">
         <thead style="background-color: #f3f4f6;">
           <tr>
@@ -81,7 +80,7 @@ export const MOCK_POSTS: JobPost[] = [
       </table>
       <p>Payment Mode: Online through Debit Cards, Credit Cards, Internet Banking, IMPS, Cash Cards/ Mobile Wallets.</p>
 
-      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">Age Limit (As on Notification Date)</h2>
+      <h2 style="color: #1e3a8a; padding-bottom: 8px;">Age Limit (As on Notification Date)</h2>
       <table border="1" style="width: 100%; border-collapse: collapse; margin-bottom: 16px;">
         <thead style="background-color: #f3f4f6;">
           <tr>
@@ -101,14 +100,14 @@ export const MOCK_POSTS: JobPost[] = [
         <li>Ex-Servicemen: As per rules</li>
       </ul>
 
-      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">Educational Qualification</h2>
+      <h2 style="color: #1e3a8a; padding-bottom: 8px;">Educational Qualification</h2>
       <ul>
         <li>Candidate should have passed 10th Standard (S.S.C./Matriculation) from a recognized Board.</li>
         <li>Should be a graduate from the state/UT coming under the Regional Jurisdiction of the Recruiting Office.</li>
         <li>Higher educational qualifications are allowed as per the latest norms.</li>
       </ul>
 
-      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">RBI Office Attendant Vacancy Details 2026</h2>
+      <h2 style="color: #1e3a8a; padding-bottom: 8px;">RBI Office Attendant Vacancy Details 2026</h2>
       <p><strong>Total: 572 Posts</strong></p>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
         <ul>
@@ -135,14 +134,14 @@ export const MOCK_POSTS: JobPost[] = [
         </ul>
       </div>
 
-      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">Selection Process</h2>
+      <h2 style="color: #1e3a8a; padding-bottom: 8px;">Selection Process</h2>
       <ul>
         <li>Online Written Examination</li>
         <li>Language Proficiency Test (LPT)</li>
       </ul>
       <p style="background-color: #fffbeb; padding: 12px; border-left: 4px solid #f59e0b; font-weight: bold;">No Interview. Final merit based on Written Exam + LPT.</p>
 
-      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">Exam Pattern</h2>
+      <h2 style="color: #1e3a8a; padding-bottom: 8px;">Exam Pattern</h2>
       <table border="1" style="width: 100%; border-collapse: collapse; margin-bottom: 16px;">
         <thead style="background-color: #f3f4f6;">
           <tr>
@@ -165,16 +164,16 @@ export const MOCK_POSTS: JobPost[] = [
         <li><strong>Language:</strong> English and Hindi (Except English section).</li>
       </ul>
 
-      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">Language Proficiency Test (LPT)</h2>
-      <p>Candidates selected in the written exam must undergo LPT in the official local language of the state concerned.</p>
+      <h2 style="color: #1e3a8a; padding-bottom: 8px;">Language Proficiency Test (LPT)</h2>
+      <p>Candidates must demonstrate proficiency in the local language of the state applied for. The test will assess:</p>
       <ul>
         <li>Reading</li>
         <li>Writing</li>
         <li>Speaking</li>
-        <li>Qualifying nature (Must pass to be eligible for final selection).</li>
+        <li>Qualifying nature (must be passed to be eligible for final selection)</li>
       </ul>
 
-      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">RBI Office Attendant Salary 2026</h2>
+      <h2 style="color: #1e3a8a; padding-bottom: 8px;">RBI Office Attendant Salary 2026</h2>
       <p style="font-size: 18px; font-weight: bold; color: #059669;">Monthly Salary: Rs. 25,000 – Rs. 27,000 (Approx. Gross)</p>
       <ul>
         <li>Dearness Allowance (DA)</li>
@@ -182,7 +181,7 @@ export const MOCK_POSTS: JobPost[] = [
         <li>Medical and Transport benefits.</li>
       </ul>
 
-      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">How to Apply Online</h2>
+      <h2 style="color: #1e3a8a; padding-bottom: 8px;">How to Apply Online</h2>
       <ol>
         <li>Visit the official RBI website: <strong>www.rbi.org.in</strong></li>
         <li>Go to the 'Recruitment' or 'Opportunities@RBI' section.</li>
@@ -193,7 +192,7 @@ export const MOCK_POSTS: JobPost[] = [
         <li>Review and Print the final application form.</li>
       </ol>
 
-      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">Documents Required</h2>
+      <h2 style="color: #1e3a8a; padding-bottom: 8px;">Documents Required</h2>
       <ul>
         <li>Aadhar Card / ID Proof.</li>
         <li>Educational Certificates (10th Marksheet).</li>
@@ -201,14 +200,14 @@ export const MOCK_POSTS: JobPost[] = [
         <li>Scanned Signature.</li>
       </ul>
 
-      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">Important Instructions</h2>
+      <h2 style="color: #1e3a8a; padding-bottom: 8px;">Important Instructions</h2>
       <ul>
         <li>Read the full notification carefully before applying.</li>
         <li>Apply only for one region/office.</li>
         <li>Ensure you meet the local language requirements.</li>
       </ul>
 
-      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">Important Links</h2>
+      <h2 style="color: #1e3a8a; padding-bottom: 8px;">Important Links</h2>
       <table border="1" style="width: 100%; border-collapse: collapse;">
         <tbody>
           <tr>
@@ -226,7 +225,7 @@ export const MOCK_POSTS: JobPost[] = [
         </tbody>
       </table>
       
-      <p style="margin-top: 30px; font-weight: bold; border-top: 1px solid #eee; pt-4;">Author: Manish Kumar</p>
+      <p style="margin-top: 30px; font-weight: bold; pt-4;">Author: Manish Kumar</p>
     `
   },
   {
@@ -246,24 +245,24 @@ export const MOCK_POSTS: JobPost[] = [
       
       <p>विश्वविद्यालय द्वारा जारी आधिकारिक सूचना के अनुसार, छात्रों को एक और मौका दिया गया है ताकि वे बिना किसी शैक्षणिक सत्र की हानि के अपनी पढ़ाई जारी रख सकें।</p>
 
-      <h2>IGNOU Re-Registration Date Extend क्यों की गई?</h2>
+      <h2 style="color: #1e3a8a; padding-bottom: 8px;">IGNOU Re-Registration Date Extend क्यों की गई?</h2>
       <p>छात्रों की भारी मांग और तकनीकी कारणों को देखते हुए विश्वविद्यालय प्रशासन ने यह निर्णय लिया है ताकि कोई भी पात्र छात्र अगले शैक्षणिक सत्र में प्रवेश से वंचित न रह जाए। पोर्टल पर आ रहे भारी ट्रैफिक के कारण भी कई छात्रों को आवेदन में कठिनाई हो रही थी, जिसे अब सुलझा लिया गया है।</p>
 
-      <h2>री-रजिस्ट्रेशन क्यों जरूरी है?</h2>
+      <h2 style="color: #1e3a8a; padding-bottom: 8px;">री-रजिस्ट्रेशन क्यों जरूरी है?</h2>
       <ul>
         <li><strong>अगले सेमेस्टर में प्रमोशन:</strong> इसके माध्यम से आप बिना परीक्षा परिणाम आए ही अगले सेमेस्टर के लिए पात्र हो जाते हैं।</li>
         <li><strong>पढ़ाई जारी रखने की पात्रता:</strong> यह आपकी पढ़ाई में निरंतरता सुनिश्चित करता है।</li>
         <li><strong>एडमिशन सुरक्षित रखने के लिए जरूरी:</strong> समय पर पंजीकरण न करने से आपका कीमती समय बर्बाद हो सकता है।</li>
       </ul>
 
-      <h2>री-रजिस्ट्रेशन करने से छात्रों को क्या लाभ मिलता है?</h2>
+      <h2 style="color: #1e3a8a; padding-bottom: 8px;">री-रजिस्ट्रेशन करने से छात्रों को क्या लाभ मिलता है?</h2>
       <ul>
         <li>व्यक्तिगत जानकारी अपडेट करने का अवसर मिलता है।</li>
         <li>अगले सत्र के लिए पसंदीदा विषय / कोर्स चयन की सुविधा।</li>
         <li>घर बैठे सुरक्षित ऑनलाइन फीस भुगतान का विकल्प।</li>
       </ul>
 
-      <h2>IGNOU Re-Registration 2026: आवेदन कैसे करें?</h2>
+      <h2 style="color: #1e3a8a; padding-bottom: 8px;">IGNOU Re-Registration 2026: आवेदन कैसे करें?</h2>
       <ol>
         <li>सबसे पहले IGNOU की आधिकारिक वेबसाइट ignou.ac.in पर जाएं।</li>
         <li>होमपेज पर 'Register Online' टैब में 'Re-Registration' लिंक पर क्लिक करें।</li>
@@ -273,14 +272,14 @@ export const MOCK_POSTS: JobPost[] = [
         <li>सफलतापूर्वक सबमिशन के बाद कन्फर्मेशन रसीद डाउनलोड करें।</li>
       </ol>
 
-      <h2>छात्रों के लिए जरूरी सलाह</h2>
+      <h2 style="color: #1e3a8a; padding-bottom: 8px;">छात्रों के लिए जरूरी सलाह</h2>
       <ul>
         <li>केवल आधिकारिक वेबसाइट का उपयोग करें और किसी अनाधिकृत लिंक से बचें।</li>
         <li>अंतिम तारीख (31 जनवरी) का इंतजार न करें, क्योंकि आखिरी दिनों में सर्वर पर लोड बढ़ सकता है।</li>
         <li>भविष्य के संदर्भ के लिए भुगतान रसीद और आवेदन पत्र सुरक्षित रखें।</li>
       </ul>
 
-      <h2>महत्वपूर्ण लिंक</h2>
+      <h2 style="color: #1e3a8a; padding-bottom: 8px;">महत्वपूर्ण लिंक</h2>
       <ul>
         <li><strong>Re-Registration Apply Online</strong> – <a href="https://ignou.ac.in" target="_blank">ignou.ac.in</a></li>
         <li><strong>Official Website</strong> – <a href="https://ignou.ac.in" target="_blank">ignou.ac.in</a></li>
@@ -288,7 +287,7 @@ export const MOCK_POSTS: JobPost[] = [
       
       <p>IGNOU January 2026 admission से जुड़ी सभी नई अपडेट्स के लिए <strong>SarkariJobsForYou.com</strong> को नियमित विज़िट करते रहें।</p>
       
-      <p style="margin-top: 30px; font-weight: bold; border-top: 1px solid #eee; pt-4;">लेखक: Manish Kumar</p>
+      <p style="margin-top: 30px; font-weight: bold; pt-4;">लेखक: Manish Kumar</p>
     `
   },
   ...generateMocks(15, Category.LATEST_JOB, 'Railway', 'New'),
