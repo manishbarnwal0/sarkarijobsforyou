@@ -43,57 +43,57 @@ export const MOCK_POSTS: JobPost[] = [
       
       <p>Interested and eligible candidates can apply online through the official RBI recruitment portal within the prescribed dates. All important details such as eligibility criteria, age limit, application fee, selection process, exam pattern, and how to apply are explained below.</p>
 
-      <h2>RBI Office Attendant Recruitment 2026 – Overview</h2>
-      <p>This recruitment is conducted annually or bi-annually by the Reserve Bank of India to select candidates for the post of Office Attendant in various regional offices. The selection is based on a country-wide competitive Test (Online Test) followed by a Language Proficiency Test (in Regional Language).</p>
+      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">RBI Office Attendant Recruitment 2026 – Overview</h2>
+      <p>This recruitment is conducted by the Reserve Bank of India to select candidates for the post of Office Attendant in various regional offices. Selection is based on an Online Test followed by a Language Proficiency Test (LPT) in the respective regional language.</p>
 
-      <h2>Important Dates</h2>
-      <table className="w-full border-collapse border border-gray-300 mb-4">
-        <thead>
-          <tr className="bg-gray-100">
-            <th className="border border-gray-300 p-2 text-left">Event</th>
-            <th className="border border-gray-300 p-2 text-left">Date</th>
+      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">Important Dates</h2>
+      <table border="1" style="width: 100%; border-collapse: collapse; margin-bottom: 16px;">
+        <thead style="background-color: #f3f4f6;">
+          <tr>
+            <th style="border: 1px solid #d1d5db; padding: 12px; text-align: left;">Event</th>
+            <th style="border: 1px solid #d1d5db; padding: 12px; text-align: left;">Date</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td className="border border-gray-300 p-2">Notification Release Date</td><td className="border border-gray-300 p-2">January 2026</td></tr>
-          <tr><td className="border border-gray-300 p-2">Online Application Start Date</td><td className="border border-gray-300 p-2">January 2026</td></tr>
-          <tr><td className="border border-gray-300 p-2">Last Date to Apply Online</td><td className="border border-gray-300 p-2">February 2026</td></tr>
-          <tr><td className="border border-gray-300 p-2">Last Date for Fee Payment</td><td className="border border-gray-300 p-2">February 2026</td></tr>
-          <tr><td className="border border-gray-300 p-2">Online Examination Date</td><td className="border border-gray-300 p-2">March / April 2026</td></tr>
-          <tr><td className="border border-gray-300 p-2">Admit Card Release</td><td className="border border-gray-300 p-2">Before Exam</td></tr>
+          <tr><td style="border: 1px solid #d1d5db; padding: 10px;">Notification Release Date</td><td style="border: 1px solid #d1d5db; padding: 10px;">January 2026</td></tr>
+          <tr><td style="border: 1px solid #d1d5db; padding: 10px;">Online Application Start Date</td><td style="border: 1px solid #d1d5db; padding: 10px;">January 2026</td></tr>
+          <tr><td style="border: 1px solid #d1d5db; padding: 10px;">Last Date to Apply Online</td><td style="border: 1px solid #d1d5db; padding: 10px;">February 2026</td></tr>
+          <tr><td style="border: 1px solid #d1d5db; padding: 10px;">Last Date for Fee Payment</td><td style="border: 1px solid #d1d5db; padding: 10px;">February 2026</td></tr>
+          <tr><td style="border: 1px solid #d1d5db; padding: 10px;">Online Examination Date</td><td style="border: 1px solid #d1d5db; padding: 10px;">March / April 2026</td></tr>
+          <tr><td style="border: 1px solid #d1d5db; padding: 10px;">Admit Card Release</td><td style="border: 1px solid #d1d5db; padding: 10px;">Before Exam</td></tr>
         </tbody>
       </table>
       <p><em>*Exact dates will be updated as per official RBI notice.</em></p>
 
-      <h2>Application Fee</h2>
-      <table className="w-full border-collapse border border-gray-300 mb-4">
-        <thead>
-          <tr className="bg-gray-100">
-            <th className="border border-gray-300 p-2 text-left">Category</th>
-            <th className="border border-gray-300 p-2 text-left">Application Fee</th>
+      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">Application Fee</h2>
+      <table border="1" style="width: 100%; border-collapse: collapse; margin-bottom: 16px;">
+        <thead style="background-color: #f3f4f6;">
+          <tr>
+            <th style="border: 1px solid #d1d5db; padding: 12px; text-align: left;">Category</th>
+            <th style="border: 1px solid #d1d5db; padding: 12px; text-align: left;">Application Fee</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td className="border border-gray-300 p-2">General / OBC / EWS</td><td className="border border-gray-300 p-2">Rs. 450/-</td></tr>
-          <tr><td className="border border-gray-300 p-2">SC / ST / PwBD</td><td className="border border-gray-300 p-2">Rs. 50/-</td></tr>
-          <tr><td className="border border-gray-300 p-2">RBI Staff</td><td className="border border-gray-300 p-2">Nil</td></tr>
+          <tr><td style="border: 1px solid #d1d5db; padding: 10px;">General / OBC / EWS</td><td style="border: 1px solid #d1d5db; padding: 10px;">Rs. 450/-</td></tr>
+          <tr><td style="border: 1px solid #d1d5db; padding: 10px;">SC / ST / PwBD</td><td style="border: 1px solid #d1d5db; padding: 10px;">Rs. 50/-</td></tr>
+          <tr><td style="border: 1px solid #d1d5db; padding: 10px;">RBI Staff</td><td style="border: 1px solid #d1d5db; padding: 10px;">Nil</td></tr>
         </tbody>
       </table>
       <p>Payment Mode: Online through Debit Cards, Credit Cards, Internet Banking, IMPS, Cash Cards/ Mobile Wallets.</p>
 
-      <h2>Age Limit (as on 01/01/2026)</h2>
-      <table className="w-full border-collapse border border-gray-300 mb-4">
-        <thead>
-          <tr className="bg-gray-100">
-            <th className="border border-gray-300 p-2 text-left">Minimum Age</th>
-            <th className="border border-gray-300 p-2 text-left">Maximum Age</th>
+      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">Age Limit (As on Notification Date)</h2>
+      <table border="1" style="width: 100%; border-collapse: collapse; margin-bottom: 16px;">
+        <thead style="background-color: #f3f4f6;">
+          <tr>
+            <th style="border: 1px solid #d1d5db; padding: 12px; text-align: left;">Minimum Age</th>
+            <th style="border: 1px solid #d1d5db; padding: 12px; text-align: left;">Maximum Age</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td className="border border-gray-300 p-2">18 Years</td><td className="border border-gray-300 p-2">25 Years</td></tr>
+          <tr><td style="border: 1px solid #d1d5db; padding: 10px;">18 Years</td><td style="border: 1px solid #d1d5db; padding: 10px;">25 Years</td></tr>
         </tbody>
       </table>
-      <p><strong>Age Relaxation:</strong></p>
+      <h3 style="font-weight: bold; margin-top: 12px;">Age Relaxation:</h3>
       <ul>
         <li>SC / ST: 5 Years</li>
         <li>OBC: 3 Years</li>
@@ -101,110 +101,127 @@ export const MOCK_POSTS: JobPost[] = [
         <li>Ex-Servicemen: As per rules</li>
       </ul>
 
-      <h2>Educational Qualification</h2>
+      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">Educational Qualification</h2>
       <ul>
         <li>Candidate should have passed 10th Standard (S.S.C./Matriculation) from a recognized Board.</li>
-        <li>The candidate should be a graduate from the state/UT coming under the Regional Jurisdiction of the Recruiting Office.</li>
-        <li>Candidate should be a domicile of the State/UT coming under the Regional Jurisdiction of the Recruitment Office to which he/she is applying.</li>
+        <li>Should be a graduate from the state/UT coming under the Regional Jurisdiction of the Recruiting Office.</li>
+        <li>Higher educational qualifications are allowed as per the latest norms.</li>
       </ul>
 
-      <h2>RBI Office Attendant Vacancy Details 2026 (Total: 572 Posts)</h2>
-      <p>Vacancies are distributed across various offices including Ahmedabad, Bengaluru, Bhopal, Bhubaneswar, Chandigarh, Chennai, Guwahati, Hyderabad, Jaipur, Jammu, Kanpur, Kochi, Kolkata, Lucknow, Mumbai, Nagpur, New Delhi, Patna, and Thiruvananthapuram. Please refer to the official notification for category-wise distribution.</p>
+      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">RBI Office Attendant Vacancy Details 2026</h2>
+      <p><strong>Total: 572 Posts</strong></p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+        <ul>
+          <li>Ahmedabad</li>
+          <li>Bengaluru</li>
+          <li>Bhopal</li>
+          <li>Bhubaneswar</li>
+          <li>Chandigarh</li>
+          <li>Chennai</li>
+          <li>Guwahati</li>
+          <li>Hyderabad</li>
+          <li>Jaipur</li>
+        </ul>
+        <ul>
+          <li>Jammu</li>
+          <li>Kanpur</li>
+          <li>Kochi</li>
+          <li>Kolkata</li>
+          <li>Lucknow</li>
+          <li>Mumbai</li>
+          <li>Nagpur</li>
+          <li>New Delhi</li>
+          <li>Patna</li>
+        </ul>
+      </div>
 
-      <h2>Selection Process</h2>
+      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">Selection Process</h2>
       <ul>
         <li>Online Written Examination</li>
         <li>Language Proficiency Test (LPT)</li>
       </ul>
-      <p><em>Note: No interview will be conducted. Final merit will be based on written exam marks, subject to qualifying LPT.</em></p>
+      <p style="background-color: #fffbeb; padding: 12px; border-left: 4px solid #f59e0b; font-weight: bold;">No Interview. Final merit based on Written Exam + LPT.</p>
 
-      <h2>Exam Pattern</h2>
-      <table className="w-full border-collapse border border-gray-300 mb-4">
-        <thead>
-          <tr className="bg-gray-100">
-            <th className="border border-gray-300 p-2 text-left">Section</th>
-            <th className="border border-gray-300 p-2 text-left">Questions</th>
-            <th className="border border-gray-300 p-2 text-left">Marks</th>
+      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">Exam Pattern</h2>
+      <table border="1" style="width: 100%; border-collapse: collapse; margin-bottom: 16px;">
+        <thead style="background-color: #f3f4f6;">
+          <tr>
+            <th style="border: 1px solid #d1d5db; padding: 12px; text-align: left;">Section</th>
+            <th style="border: 1px solid #d1d5db; padding: 12px; text-align: left;">Questions</th>
+            <th style="border: 1px solid #d1d5db; padding: 12px; text-align: left;">Marks</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td className="border border-gray-300 p-2">Reasoning Ability</td><td className="border border-gray-300 p-2">30</td><td className="border border-gray-300 p-2">30</td></tr>
-          <tr><td className="border border-gray-300 p-2">Numerical Ability</td><td className="border border-gray-300 p-2">30</td><td className="border border-gray-300 p-2">30</td></tr>
-          <tr><td className="border border-gray-300 p-2">General English</td><td className="border border-gray-300 p-2">30</td><td className="border border-gray-300 p-2">30</td></tr>
-          <tr><td className="border border-gray-300 p-2">General Awareness</td><td className="border border-gray-300 p-2">30</td><td className="border border-gray-300 p-2">30</td></tr>
-          <tr className="font-bold">
-            <td className="border border-gray-300 p-2">Total</td>
-            <td className="border border-gray-300 p-2">120</td>
-            <td className="border border-gray-300 p-2">120</td>
-          </tr>
+          <tr><td style="border: 1px solid #d1d5db; padding: 10px;">Reasoning Ability</td><td style="border: 1px solid #d1d5db; padding: 10px;">30</td><td style="border: 1px solid #d1d5db; padding: 10px;">30</td></tr>
+          <tr><td style="border: 1px solid #d1d5db; padding: 10px;">Numerical Ability</td><td style="border: 1px solid #d1d5db; padding: 10px;">30</td><td style="border: 1px solid #d1d5db; padding: 10px;">30</td></tr>
+          <tr><td style="border: 1px solid #d1d5db; padding: 10px;">General English</td><td style="border: 1px solid #d1d5db; padding: 10px;">30</td><td style="border: 1px solid #d1d5db; padding: 10px;">30</td></tr>
+          <tr><td style="border: 1px solid #d1d5db; padding: 10px;">General Awareness</td><td style="border: 1px solid #d1d5db; padding: 10px;">30</td><td style="border: 1px solid #d1d5db; padding: 10px;">30</td></tr>
+          <tr style="font-weight: bold;"><td style="border: 1px solid #d1d5db; padding: 10px;">Total</td><td style="border: 1px solid #d1d5db; padding: 10px;">120</td><td style="border: 1px solid #d1d5db; padding: 10px;">120</td></tr>
         </tbody>
       </table>
       <ul>
-        <li>Duration: 90 Minutes</li>
-        <li>Negative Marking: 1/4th (0.25) marks for each wrong answer.</li>
-        <li>Language: Except English, other sections will be available in English and Hindi.</li>
+        <li><strong>Duration:</strong> 90 Minutes</li>
+        <li><strong>Negative Marking:</strong> 1/4th (0.25) for each wrong answer.</li>
+        <li><strong>Language:</strong> English and Hindi (Except English section).</li>
       </ul>
 
-      <h2>Language Proficiency Test (LPT)</h2>
-      <p>Candidates provisionally selected from the online examination will have to undergo a language proficiency test (LPT). The LPT will be conducted in the Official / Local Language of the State concerned.</p>
+      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">Language Proficiency Test (LPT)</h2>
+      <p>Candidates selected in the written exam must undergo LPT in the official local language of the state concerned.</p>
       <ul>
-        <li>The LPT is qualifying in nature.</li>
-        <li>Candidates not qualifying LPT will not be considered for selection.</li>
+        <li>Reading</li>
+        <li>Writing</li>
+        <li>Speaking</li>
+        <li>Qualifying nature (Must pass to be eligible for final selection).</li>
       </ul>
 
-      <h2>Salary Details</h2>
-      <p><strong>Monthly Salary:</strong> Rs. 25,000 – Rs. 27,000 (Approx. Gross Monthly Emoluments at the start of career).</p>
-      <p><strong>Allowances & Benefits:</strong></p>
+      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">RBI Office Attendant Salary 2026</h2>
+      <p style="font-size: 18px; font-weight: bold; color: #059669;">Monthly Salary: Rs. 25,000 – Rs. 27,000 (Approx. Gross)</p>
       <ul>
-        <li>Dearness Allowance</li>
-        <li>House Rent Allowance</li>
-        <li>City Compensatory Allowance</li>
-        <li>Transport Allowance etc.</li>
-        <li>Reimbursement of expenses for maintenance of vehicle for eligible employees.</li>
+        <li>Dearness Allowance (DA)</li>
+        <li>House Rent Allowance (HRA)</li>
+        <li>Medical and Transport benefits.</li>
       </ul>
 
-      <h2>How to Apply</h2>
+      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">How to Apply Online</h2>
       <ol>
-        <li>Visit the official RBI website: www.rbi.org.in</li>
-        <li>Click on "Recruitment for the post of Office Attendant-2026" under the 'Opportunities@RBI' section.</li>
-        <li>Click on "New Registration" and provide basic details like Name, Contact, and Email.</li>
-        <li>Login using the registration ID and password sent to your mobile/email.</li>
-        <li>Fill in educational details and upload scanned documents.</li>
-        <li>Preview the application and pay the application fee online.</li>
-        <li>Submit the form and take a printout of the final application for future reference.</li>
+        <li>Visit the official RBI website: <strong>www.rbi.org.in</strong></li>
+        <li>Go to the 'Recruitment' or 'Opportunities@RBI' section.</li>
+        <li>Complete the 'New Registration' with personal details.</li>
+        <li>Fill out the complete Application Form.</li>
+        <li>Upload scanned photograph, signature, and thumb impression.</li>
+        <li>Pay the application fee online.</li>
+        <li>Review and Print the final application form.</li>
       </ol>
 
-      <h2>Documents Required</h2>
+      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">Documents Required</h2>
       <ul>
-        <li>Scanned Photograph (20kb-50kb)</li>
-        <li>Scanned Signature (10kb-20kb)</li>
-        <li>Left Thumb Impression</li>
-        <li>Handwritten Declaration</li>
-        <li>Valid ID Proof (Aadhar/PAN/Voter ID)</li>
+        <li>Aadhar Card / ID Proof.</li>
+        <li>Educational Certificates (10th Marksheet).</li>
+        <li>Passport size photograph.</li>
+        <li>Scanned Signature.</li>
       </ul>
 
-      <h2>Important Instructions</h2>
+      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">Important Instructions</h2>
       <ul>
         <li>Read the full notification carefully before applying.</li>
-        <li>Ensure you meet all eligibility criteria as of the cut-off date.</li>
-        <li>Provide a valid mobile number and email ID as all communication will be sent there.</li>
-        <li>Application once submitted cannot be modified.</li>
+        <li>Apply only for one region/office.</li>
+        <li>Ensure you meet the local language requirements.</li>
       </ul>
 
-      <h2>Important Links</h2>
-      <table className="w-full border-collapse border border-gray-300">
+      <h2 style="color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px;">Important Links</h2>
+      <table border="1" style="width: 100%; border-collapse: collapse;">
         <tbody>
           <tr>
-            <td className="border border-gray-300 p-2 font-bold">Apply Online</td>
-            <td className="border border-gray-300 p-2 text-blue-600 font-bold"><a href="https://www.rbi.org.in" target="_blank">Click Here</a></td>
+            <td style="border: 1px solid #d1d5db; padding: 12px; font-weight: bold; width: 40%;">Apply Online</td>
+            <td style="border: 1px solid #d1d5db; padding: 12px;"><a href="https://www.rbi.org.in" target="_blank" style="color: #2563eb; font-weight: bold; text-decoration: none;">Official RBI Website</a></td>
           </tr>
           <tr>
-            <td className="border border-gray-300 p-2 font-bold">Notification PDF</td>
-            <td className="border border-gray-300 p-2 text-blue-600 font-bold">Available in Recruitment Section</td>
+            <td style="border: 1px solid #d1d5db; padding: 12px; font-weight: bold;">Notification PDF</td>
+            <td style="border: 1px solid #d1d5db; padding: 12px; color: #ef4444; font-weight: bold;">Available in Recruitment Section</td>
           </tr>
           <tr>
-            <td className="border border-gray-300 p-2 font-bold">Official Website</td>
-            <td className="border border-gray-300 p-2 text-blue-600 font-bold"><a href="https://www.rbi.org.in" target="_blank">rbi.org.in</a></td>
+            <td style="border: 1px solid #d1d5db; padding: 12px; font-weight: bold;">Official Website</td>
+            <td style="border: 1px solid #d1d5db; padding: 12px;"><a href="https://www.rbi.org.in" target="_blank" style="color: #2563eb; font-weight: bold; text-decoration: none;">https://www.rbi.org.in</a></td>
           </tr>
         </tbody>
       </table>
