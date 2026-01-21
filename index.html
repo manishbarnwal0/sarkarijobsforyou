@@ -40,6 +40,30 @@
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
             background: #999;
         }
+        
+        /* Scoped typography for post content area */
+        .post-content-area h2 {
+            font-size: 1.5rem; /* Equivalent to text-2xl */
+            line-height: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        .post-content-area h3 {
+            font-size: 1.25rem; /* Equivalent to text-xl */
+            line-height: 1.75rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+        @media (max-width: 768px) {
+            .post-content-area h2 {
+                font-size: 1.25rem;
+            }
+            .post-content-area h3 {
+                font-size: 1.125rem;
+            }
+        }
     </style>
 <script type="importmap">
 {
